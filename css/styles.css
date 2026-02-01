@@ -194,7 +194,7 @@ nav {
 .contact-list a {
   display: block;
   padding: 24px 0;
-  font-size: 12px; /* Меньший шрифт для мобильной версии */
+  font-size: 12px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
@@ -209,7 +209,7 @@ nav {
 
 /* ===== HERO ===== */
 .hero {
-  max-width: 100%;
+  max-width: 428px;
   margin: 0 auto;
   background-color: #2e2f42;
   padding: 72px 16px;
@@ -222,7 +222,7 @@ nav {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: auto;
+  height: 432px;
 }
 
 @media (min-resolution: 192dpi),
@@ -303,6 +303,7 @@ button:focus {
 .feature {
   width: 100%;
   max-width: 288px;
+  margin: 0 auto;
 }
 
 .feature h3 {
@@ -325,10 +326,9 @@ button:focus {
   border: 1px solid #8E8F99;
   height: 112px;
   margin-bottom: 8px;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
-  display: none;
 }
 
 .feature .icon {
@@ -346,7 +346,7 @@ button:focus {
 
 .container-team {
   margin: 0 auto;
-  padding: 0 28px;
+  padding: 0 16px;
 }
 
 .team h2 {
@@ -458,6 +458,9 @@ button:focus {
   max-width: 288px;
   margin: 0 auto;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 1px rgba(46, 47, 66, 0.08),
+    0 1px 1px rgba(46, 47, 66, 0.16),
+    0 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .boxs {
@@ -931,16 +934,13 @@ footer {
 
 /* МОДАЛЬНОЕ МЕНЮ */
 .modal-overlay-menu {
-  background-color: rgba(46, 47, 66, 0.4);
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  background-color: #fff;
   z-index: 1000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
@@ -955,33 +955,22 @@ footer {
 }
 
 .modal-menu {
-  background-color: #fcfcfc;
-  border-radius: 4px;
-  padding: 72px 16px 24px;
-  width: 100%;
   height: 100%;
-  box-shadow: 0px 1px 1px 0px #00000024,
-              0px 1px 3px 0px #0000001F,
-              0px 2px 1px 0px #00000033;
   overflow-y: auto;
-  position: relative;
-  transform: scale(0.9);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal-overlay-menu.is-open .modal-menu {
-  transform: scale(1);
+  padding: 72px 16px 24px;
+  display: flex;
+  flex-direction: column;
 }
 
 .mobile-menus {
   display: flex;
   flex-direction: column;
   gap: 40px;
+  flex-grow: 1;
 }
 
 .contacty {
   gap: 24px;
-  margin-top: 168px;
   display: flex;
   flex-direction: column;
   margin-bottom: 42px;
@@ -994,6 +983,11 @@ footer {
 
 .purple {
   color: rgba(77, 90, 229, 1);
+  font-size: 20px;
+}
+
+.contacty h3:not(.purple) {
+  font-size: 16px;
 }
 
 .nav-links {
@@ -1019,6 +1013,7 @@ footer {
   list-style: none;
   padding: 0;
   margin: 0;
+  margin-top: auto;
 }
 
 .socials-linke {
@@ -1086,10 +1081,24 @@ footer {
 }
 
 /* ===================== MEDIA 768px+ (TABLET) ===================== */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1157px) {
   .container {
     max-width: 768px;
     padding: 0 16px;
+  }
+  
+  /* TEAM SECTION - суженный контейнер */
+  .team .container-team {
+    max-width: 584px;
+    padding: 0 16px;
+    margin: 0 auto;
+  }
+  
+  /* FOOTER - суженный контейнер */
+  footer .container {
+    max-width: 584px;
+    padding: 0 16px;
+    margin: 0 auto;
   }
   
   header {
@@ -1128,10 +1137,12 @@ footer {
   
   .contact-list a {
     padding: 0;
-    font-size: 12px; /* Меньший шрифт для планшета */
+    font-size: 12px;
   }
   
+  /* HERO */
   .hero {
+    max-width: 768px;
     padding: 112px 136px;
     height: 436px;
   }
@@ -1143,6 +1154,7 @@ footer {
     height: auto;
   }
   
+  /* FEATURES */
   .features {
     padding: 96px 0;
   }
@@ -1156,6 +1168,7 @@ footer {
   .feature {
     width: calc((100% - 24px) / 2);
     max-width: 356px;
+    margin: 0;
   }
   
   .feature h3 {
@@ -1167,6 +1180,7 @@ footer {
     font-weight: 500;
   }
   
+  /* TEAM */
   .team-ul {
     flex-direction: row;
     flex-wrap: wrap;
@@ -1175,12 +1189,10 @@ footer {
   
   .member {
     width: calc((100% - 24px) / 2);
+    max-width: 264px;
   }
   
-  .container-team {
-    padding: 0 16px;
-  }
-  
+  /* PORTFOLIO */
   .porto {
     flex-direction: row;
     flex-wrap: wrap;
@@ -1189,13 +1201,15 @@ footer {
   
   .portfolio-item {
     flex-basis: calc((100% - 24px) / 2);
-    max-width: none;
+    max-width: 356px;
+    margin: 0;
   }
   
   .boxs img {
     height: 300px;
   }
   
+  /* FOOTER */
   .footer-content {
     flex-direction: row;
     flex-wrap: wrap;
@@ -1268,12 +1282,13 @@ footer {
   }
   
   .contact-list a {
-    font-size: 16px; /* Больший шрифт только для десктопа */
+    font-size: 16px;
     padding: 24px 0;
   }
   
   /* HERO */
   .hero {
+    max-width: 1440px;
     padding: 188px 0;
     height: 600px;
   }
@@ -1294,10 +1309,12 @@ footer {
   
   .feature {
     width: 264px;
+    margin: 0;
   }
   
   .feature h3 {
     font-size: 20px;
+    text-align: left;
   }
   
   .box {
@@ -1333,6 +1350,7 @@ footer {
   
   .portfolio-item {
     flex-basis: calc((100% - 48px) / 3);
+    max-width: 360px;
   }
   
   .boxs img {
