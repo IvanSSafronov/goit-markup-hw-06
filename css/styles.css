@@ -217,7 +217,7 @@ nav {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/people-office@2x.jpg);
+    url(../images/people-office-mobile.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1034,20 +1034,21 @@ footer {
   font-style: normal;
 }
 
-.mobile-phone {
-  color: rgba(77, 90, 229, 1);
+.mobile-phone,
+.mobile-email {
   font-size: 20px;
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.02em;
+  text-decoration: none;
+}
+
+.mobile-phone {
+  color: rgba(77, 90, 229, 1);
 }
 
 .mobile-email {
   color: #434455;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
 }
 
 .nav-links {
@@ -1097,7 +1098,12 @@ footer {
 }
 
 /* ===================== MEDIA 768px+ (TABLET) ===================== */
-@media screen and (min-width: 768px) and (max-width: 1157px) {
+@media screen and (min-width: 768px) {
+  /* Скрываем мобильное меню на планшетах и десктопе */
+  .modal-overlay-menu {
+    display: none;
+  }
+  
   .container {
     max-width: 768px;
     padding: 0 16px;
@@ -1387,8 +1393,9 @@ footer {
   }
   
   .container-features {
-    gap: 24px;
+    flex-direction: row;
     flex-wrap: nowrap;
+    gap: 24px;
   }
   
   .feature {
@@ -1422,11 +1429,13 @@ footer {
   
   .team-ul {
     flex-wrap: nowrap;
+    flex-direction: row;
     gap: 24px;
   }
   
   .member {
     width: calc((100% - 72px) / 4);
+    margin: 0;
   }
   
   /* PORTFOLIO */
@@ -1443,7 +1452,12 @@ footer {
   .portfolio-item {
     flex-basis: calc((100% - 48px) / 3);
     max-width: 360px;
-    /* Тень для десктопных карточек по умолчанию */
+    /* Убираем тень по умолчанию для десктопных карточек */
+    box-shadow: none;
+  }
+  
+  .portfolio-item:hover {
+    /* Тень только при наведении на десктопе */
     box-shadow: 0 2px 1px rgba(46, 47, 66, 0.08),
       0 1px 1px rgba(46, 47, 66, 0.16),
       0 1px 6px rgba(46, 47, 66, 0.08);
@@ -1460,21 +1474,26 @@ footer {
   
   .footer-content {
     flex-wrap: nowrap;
+    flex-direction: row;
     column-gap: 0;
     row-gap: 0;
     align-items: baseline;
+    justify-content: flex-start;
   }
   
   .footer-info {
     margin-right: 120px;
+    text-align: left;
   }
   
   .footer-social {
     margin-right: 80px;
+    text-align: left;
   }
   
   .footer-sub {
     margin-left: auto;
+    align-items: flex-start;
   }
   
   .footer-logo {
@@ -1500,4 +1519,3 @@ footer {
     padding: 72px 24px 40px;
   }
 }
-
