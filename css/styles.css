@@ -239,7 +239,7 @@ nav {
 .hero h1 {
   color: #ffffff;
   margin: 0 auto 72px;
-  max-width: 288px;
+  max-width: 216px;
   height: auto;
 }
 
@@ -459,7 +459,10 @@ button:focus {
   max-width: 288px;
   margin: 0 auto;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  /* Убрана тень по умолчанию для всех состояний */
+  /* Восстановлена тень по умолчанию для мобильных и планшетных карточек */
+  box-shadow: 0 2px 1px rgba(46, 47, 66, 0.08),
+    0 1px 1px rgba(46, 47, 66, 0.16),
+    0 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .boxs {
@@ -497,10 +500,10 @@ button:focus {
 }
 
 .portfolio-item:hover {
-  /* Тень добавляется только при наведении */
-  box-shadow: 0 2px 1px rgba(46, 47, 66, 0.08),
-    0 1px 1px rgba(46, 47, 66, 0.16),
-    0 1px 6px rgba(46, 47, 66, 0.08);
+  /* Дополнительная тень при наведении */
+  box-shadow: 0 4px 4px rgba(46, 47, 66, 0.16),
+    0 2px 1px rgba(46, 47, 66, 0.08),
+    0 2px 6px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-info {
@@ -1014,15 +1017,24 @@ footer {
   flex-grow: 1;
 }
 
+/* Исправление контактов в мобильном меню */
 .contacty {
-  gap: 24px;
   display: flex;
   flex-direction: column;
+  gap: 24px;
   margin-top: auto;
   margin-bottom: 48px;
+  font-style: normal;
 }
 
-.purple {
+.contacty address {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-style: normal;
+}
+
+.mobile-phone {
   color: rgba(77, 90, 229, 1);
   font-size: 20px;
   font-weight: 500;
@@ -1030,10 +1042,11 @@ footer {
   letter-spacing: 0.02em;
 }
 
-.contacty h3:not(.purple) {
-  font-size: 16px;
+.mobile-email {
+  color: #434455;
+  font-size: 20px;
   font-weight: 500;
-  line-height: 1.5;
+  line-height: 1.2;
   letter-spacing: 0.02em;
 }
 
@@ -1119,7 +1132,7 @@ footer {
   }
   
   nav {
-    gap: 120px;
+    gap: 76px;
   }
   
   .logo {
@@ -1225,6 +1238,10 @@ footer {
     flex-basis: calc((100% - 24px) / 2);
     max-width: 356px;
     margin: 0;
+    /* Сохраняем тень для планшетных карточек */
+    box-shadow: 0 2px 1px rgba(46, 47, 66, 0.08),
+      0 1px 1px rgba(46, 47, 66, 0.16),
+      0 1px 6px rgba(46, 47, 66, 0.08);
   }
   
   .boxs {
@@ -1314,6 +1331,11 @@ footer {
   
   .navigation {
     display: flex;
+  }
+  
+  /* Уменьшаем расстояние между логотипом и навигацией на десктопе */
+  nav {
+    gap: 76px;
   }
   
   .container-adress {
@@ -1421,6 +1443,10 @@ footer {
   .portfolio-item {
     flex-basis: calc((100% - 48px) / 3);
     max-width: 360px;
+    /* Тень для десктопных карточек по умолчанию */
+    box-shadow: 0 2px 1px rgba(46, 47, 66, 0.08),
+      0 1px 1px rgba(46, 47, 66, 0.16),
+      0 1px 6px rgba(46, 47, 66, 0.08);
   }
   
   .boxs {
