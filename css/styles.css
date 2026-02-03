@@ -217,7 +217,7 @@ nav {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/people-office@2x.jpg);
+    url(../images/people-office.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -232,7 +232,7 @@ nav {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url("../images/people-office.png");
+      url("../images/people-office@2x.jpg");
   }
 }
 
@@ -380,6 +380,12 @@ button:focus {
   margin: 0 auto;
 }
 
+.member img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .member-info {
   padding: 32px 16px;
 }
@@ -428,6 +434,8 @@ button:focus {
 
 .socials-link .icon {
   fill: #F4F4FD;
+  width: 16px;
+  height: 16px;
 }
 
 /* ===== PORTFOLIO ===== */
@@ -1005,7 +1013,7 @@ footer {
 .modal-menu {
   height: 100%;
   overflow-y: auto;
-  padding: 72px 16px 40px;
+  padding: 72px 16px 24px;
   display: flex;
   flex-direction: column;
 }
@@ -1095,6 +1103,8 @@ footer {
 
 .socials-linke .icon {
   fill: #F4F4FD;
+  width: 24px;
+  height: 24px;
 }
 
 /* ===================== MEDIA 768px+ (TABLET) ===================== */
@@ -1167,23 +1177,6 @@ footer {
     max-width: 100%;
     padding: 112px 136px;
     height: 436px;
-    background-image: linear-gradient(
-      rgba(46, 47, 66, 0.7),
-      rgba(46, 47, 66, 0.7)
-    ),
-    url(../images/people-office-tablet.jpg);
-  }
-  
-  @media (min-resolution: 192dpi),
-         (min-resolution: 2dppx) {
-    .hero {
-      background-image:
-        linear-gradient(
-          rgba(46, 47, 66, 0.7),
-          rgba(46, 47, 66, 0.7)
-        ),
-        url("../images/people-office-tablet@2x.jpg");
-    }
   }
   
   .hero h1 {
@@ -1316,11 +1309,6 @@ footer {
   .modal p {
     max-width: 100%;
   }
-  
-  /* МОДАЛЬНОЕ МЕНЮ */
-  .modal-menu {
-    padding: 72px 24px 40px;
-  }
 }
 
 /* ===================== MEDIA 1158px+ (DESKTOP) ===================== */
@@ -1364,23 +1352,6 @@ footer {
     max-width: 1440px;
     padding: 188px 0;
     height: 600px;
-    background-image: linear-gradient(
-      rgba(46, 47, 66, 0.7),
-      rgba(46, 47, 66, 0.7)
-    ),
-    url(../images/people-office-desktop.jpg);
-  }
-  
-  @media (min-resolution: 192dpi),
-         (min-resolution: 2dppx) {
-    .hero {
-      background-image:
-        linear-gradient(
-          rgba(46, 47, 66, 0.7),
-          rgba(46, 47, 66, 0.7)
-        ),
-        url("../images/people-office-desktop@2x.jpg");
-    }
   }
   
   .hero h1 {
@@ -1420,6 +1391,8 @@ footer {
   
   .feature .icon {
     display: block;
+    width: 64px;
+    height: 64px;
   }
   
   /* TEAM */
@@ -1514,9 +1487,19 @@ footer {
     max-width: 100%;
   }
   
-  /* МОДАЛЬНОЕ МЕНЮ */
-  .modal-menu {
-    padding: 72px 24px 40px;
+  /* Увеличиваем иконки соцсетей на десктопе */
+  .socials-link .icon {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .footer-social-link svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .socials-linke .icon {
+    width: 24px;
+    height: 24px;
   }
 }
-
