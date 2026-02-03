@@ -1327,7 +1327,7 @@ footer {
     display: flex;
   }
   
-  /* Уменьшаем расстояние между логотипом и навигацией на десктопе */
+  
   nav {
     gap: 76px;
   }
@@ -1401,16 +1401,77 @@ footer {
   }
   
   .team-ul {
-    flex-wrap: nowrap;
-    flex-direction: row;
+    display: flex;
+    justify-content: center;
     gap: 24px;
-  }
-  
-  .member {
-    width: calc((100% - 72px) / 4);
+    list-style: none;
+    padding: 0;
     margin: 0;
   }
   
+  .team-ul .member {
+    box-shadow:
+      0px 2px 1px rgba(46, 47, 66, 0.08),
+      0px 1px 1px rgba(46, 47, 66, 0.16),
+      0px 1px 6px rgba(46, 47, 66, 0.08);
+  }
+  
+  .member {
+    background-color: #ffffff;
+    border-radius: 0px 0px 4px 4px;
+    overflow: hidden;
+    width: 264px;
+  }
+  
+  .member-info {
+    padding: 32px 16px;
+  }
+  
+  .member h3 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    margin-bottom: 8px;
+  }
+  
+  .member p {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455;
+    margin: 0;
+  }
+  
+  .socials {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 8px;
+  }
+  
+  .socials-link {
+    width: 40px;
+    height: 40px;
+    background-color: #4D5AE5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .socials-link:hover,
+  .socials-link:focus {
+    background-color: #404BBF;
+  }
+  
+  .socials-link .icon {
+    fill: #F4F4FD;
+  }
   /* PORTFOLIO */
   .portfolio {
     padding: 120px 0;
@@ -1425,12 +1486,12 @@ footer {
   .portfolio-item {
     flex-basis: calc((100% - 48px) / 3);
     max-width: 360px;
-    /* Убираем тень по умолчанию для десктопных карточек */
+   
     box-shadow: none;
   }
   
   .portfolio-item:hover {
-    /* Тень только при наведении на десктопе */
+    
     box-shadow: 0 2px 1px rgba(46, 47, 66, 0.08),
       0 1px 1px rgba(46, 47, 66, 0.16),
       0 1px 6px rgba(46, 47, 66, 0.08);
@@ -1503,3 +1564,4 @@ footer {
     height: 24px;
   }
 }
+
