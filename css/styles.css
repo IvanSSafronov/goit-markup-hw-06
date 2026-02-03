@@ -1108,8 +1108,7 @@ footer {
 }
 
 /* ===================== MEDIA 768px+ (TABLET) ===================== */
-@media screen and (min-width: 768px) {
-  /* Скрываем мобильное меню на планшетах и десктопе */
+@media screen and (min-width: 768px) and (max-width: 1157px){
   .modal-overlay-menu {
     display: none;
   }
@@ -1564,4 +1563,5 @@ footer {
     height: 24px;
   }
 }
+
 
