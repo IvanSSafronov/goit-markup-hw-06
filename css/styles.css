@@ -217,7 +217,7 @@ nav {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/people-office-mobile.jpg);
+    url(../images/Dark-bg@2x.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -232,7 +232,7 @@ nav {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url("../images/people-office-mobile@2x.jpg");
+      url("../images/people-office-mobile.png");
   }
 }
 
