@@ -1351,7 +1351,7 @@ a.nav-links.choosen{
   
   /* HERO */
   .hero {
-    max-width: 1158px;
+    max-width: 1440px;
     padding: 188px 0;
     height: 600px;
   }
@@ -1575,6 +1575,7 @@ a.nav-links.choosen{
     height: 24px;
   }
 }
+
 
 
 
