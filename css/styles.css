@@ -194,8 +194,8 @@ nav {
   display: block;
   padding: 24px 0;
   font-size: 12px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
   color: #434455;
   text-decoration: none;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -241,6 +241,7 @@ nav {
   color: #ffffff;
   margin: 0 auto 72px;
   height: auto;
+  max-width: 216px;
 }
 
 .container-hero {
@@ -318,7 +319,7 @@ button:focus {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .box {
@@ -639,13 +640,10 @@ footer {
 
 .form-input-footer {
   margin-top: 16px;
-}
-
-.form-input-footer {
   font-size: 12px;
   line-height: 2;
-  width: 288px;
-  max-width: 264px;
+  width: 100%;
+  max-width: 288px;
   height: 40px;
   padding: 8px 16px;
   background-color: transparent;
@@ -1066,7 +1064,7 @@ footer {
   display: block;
   font-weight: 700;
   font-size: 36px;
-  line-height: 1.5;
+  line-height: 1.11;
   letter-spacing: 0.02em;
   color: #2e2f42;
   text-decoration: none;
@@ -1122,14 +1120,14 @@ a.nav-links.choosen{
     padding: 0 16px;
   }
   
-  /* TEAM SECTION - суженный контейнер */
+  /* TEAM SECTION -  */
   .team .container-team {
     max-width: 584px;
     padding: 0 16px;
     margin: 0 auto;
   }
   
-  /* FOOTER - суженный контейнер */
+  /* FOOTER - */
   footer .container {
     max-width: 584px;
     padding: 0 16px;
@@ -1151,7 +1149,7 @@ a.nav-links.choosen{
   }
   
   nav {
-    gap: 76px;
+    gap: 120px;
   }
   
   .logo {
@@ -1230,7 +1228,7 @@ a.nav-links.choosen{
   }
   
   .feature p {
-    font-weight: 600;
+    font-weight: 500;
   }
   
   /* TEAM */
@@ -1347,7 +1345,7 @@ a.nav-links.choosen{
   
   
   nav {
-    gap: 76px;
+    gap: 120px;
   }
   
   .container-adress {
@@ -1363,6 +1361,8 @@ a.nav-links.choosen{
   .contact-list a {
     font-size: 16px;
     padding: 24px 0;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
   }
   
   /* HERO */
@@ -1608,6 +1608,7 @@ a.nav-links.choosen{
     height: 24px;
   }
 }
+
 
 
 
