@@ -208,13 +208,13 @@ nav {
 
 /* ===== HERO ===== */
 .hero {
-  max-width: 100%;
+  max-width: 320px;
   margin: 0 auto;
   background-color: #2e2f42;
   padding: 72px 16px;
   text-align: center;
-  aling-items:center;
-  justify-content:center;
+  align-items: center;
+  justify-content: center;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
@@ -237,7 +237,6 @@ nav {
       url("../images/people-office@2x.jpg");
   }
 }
-
 .hero h1 {
   color: #ffffff;
   margin: 0 auto 72px;
@@ -1058,9 +1057,14 @@ footer {
   color: #434455;
 }
 
+.modal-menu .socials-link .icon {
+  width: 24px;
+  height: 24px;
+}
+
 .nav-links {
   display: block;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 36px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -1173,8 +1177,25 @@ a.nav-links.choosen{
   
   /* HERO */
   .hero {
-    max-width: 100%;
-    padding: 112px 136px ;
+    max-width: 768px;
+    padding: 112px 136px;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url("../images/people-office-tablet.jpg");
+  }
+  
+  @media (min-resolution: 192dpi),
+         (min-resolution: 2dppx) {
+    .hero {
+      background-image:
+        linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url("../images/people-office-tablet@2x.jpg");
+    }
   }
   
   .hero h1 {
@@ -1348,6 +1369,23 @@ a.nav-links.choosen{
   .hero {
     max-width: 1440px;
     padding: 188px 0;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url("../images/people-office-desktop.jpg");
+  }
+  
+  @media (min-resolution: 192dpi),
+         (min-resolution: 2dppx) {
+    .hero {
+      background-image:
+        linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url("../images/people-office-desktop@2x.jpg");
+    }
   }
   
   .hero h1 {
@@ -1570,6 +1608,7 @@ a.nav-links.choosen{
     height: 24px;
   }
 }
+
 
 
 
