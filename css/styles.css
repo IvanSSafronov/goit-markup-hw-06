@@ -1036,6 +1036,7 @@ footer {
   flex-direction: column;
   gap: 24px;
   font-style: normal;
+  margin-top: auto;
 }
 
 .mobile-phone,
@@ -1056,8 +1057,8 @@ footer {
 }
 
 .modal-menu .socials-link .icon {
-  width: 24px;
-  height: 24px;
+  width: 24px !important;
+  height: 24px !important;
 }
 
 .nav-links {
@@ -1345,7 +1346,7 @@ a.nav-links.choosen{
   
   
   nav {
-    gap: 120px;
+    gap: 76px;
   }
   
   .container-adress {
@@ -1608,6 +1609,7 @@ a.nav-links.choosen{
     height: 24px;
   }
 }
+
 
 
 
